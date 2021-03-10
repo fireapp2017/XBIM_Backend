@@ -26,17 +26,18 @@ namespace XBIM_Backend.Controllers
         [Route("GetSpecificElementOccurances")]
         public async Task<ActionResult<Object>> GetSpecificElementOccurances()
         {
+            //To do - modofy endpoint to return adequate http codes
             try
             {
                 var operation = new IFSServices();
-                var ElementsList = operation.GetSpecificElementOccurances();
+                var ElementOccurancesList = operation.GetSpecificElementOccurances();
             
-                if (ElementsList == null)
+                if (ElementOccurancesList == null)
                 {
                     return NotFound();
                 }
 
-                return ElementsList;
+                return ElementOccurancesList;
                 }
             catch (Exception ex)
             {
@@ -51,14 +52,15 @@ namespace XBIM_Backend.Controllers
         {
             try
             {
+                //To do - modofy endpoint to return adequate http codes
                 var operation = new IFSServices();
-                var ElementsList = operation.GetAllElementOccurences();
+                var AllElementOccurencesList = operation.GetAllElementOccurences();
 
-                if (ElementsList == null)
+                if (AllElementOccurencesList == null)
                 {
                     return NotFound();
                 }
-                return ElementsList;
+                return AllElementOccurencesList;
             }
             catch (Exception ex)
             {
@@ -74,16 +76,16 @@ namespace XBIM_Backend.Controllers
         {
             try
             {
-
+                //To do - modofy endpoint to return adequate http codes
                 var operation = new IFSServices();
-                var ElementsList = operation.GetAllBuildingElementOccurences();
+                var BuildingElementOccurencesList = operation.GetAllBuildingElementOccurences();
 
-                if (ElementsList == null)
+                if (BuildingElementOccurencesList == null)
                 {
                     return NotFound();
                 }
 
-                return ElementsList;
+                return BuildingElementOccurencesList;
             }
             catch (Exception ex)
             {
@@ -99,15 +101,16 @@ namespace XBIM_Backend.Controllers
         {
             try
             {
+                //To do - modofy endpoint to return adequate http codes
                 var operation = new IFSServices();
-                var ElementsList = operation.GetRoomElementDetails();
+                var RoomElementDetailsList = operation.GetRoomElementDetails();
 
-                if (ElementsList == null)
+                if (RoomElementDetailsList == null)
                 {
                     return NotFound();
                 }
 
-                return ElementsList;
+                return RoomElementDetailsList;
             }
             catch (Exception ex)
             {

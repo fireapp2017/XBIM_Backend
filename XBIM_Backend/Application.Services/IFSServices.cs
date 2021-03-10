@@ -39,6 +39,7 @@ namespace XBIM_Backend.Application.Services
                     List<ElementOccurences> AllBuildingElementsGrouped = new List<ElementOccurences>();
                     foreach (var a in allElements)
                     {
+                        //to do - replace by accessing predefinedtype
                         var element = a.Name.ToString();
                         var elementType = element.Remove(element.IndexOf(":"));
 
@@ -74,6 +75,7 @@ namespace XBIM_Backend.Application.Services
                     List<ElementOccurences> AllElements = new List<ElementOccurences>();
                     foreach (var a in allElements)
                     {
+                        //to do - replace by accessing predefinedtype
                         var element = a.Name.ToString();
                         var elementType = element.Remove(element.IndexOf(":"));
 
@@ -143,6 +145,7 @@ namespace XBIM_Backend.Application.Services
 
                     foreach (var room in rooms)
                     {
+                        //added both gross and net floor areas
                         var roomGrossArea = Convert.ToDecimal(((Xbim.Ifc4.ProductExtension.IfcSpace)room).GrossFloorArea.Value);
                         var roomNetArea = Convert.ToDecimal(((Xbim.Ifc4.ProductExtension.IfcSpace)room).NetFloorArea.Value);
                         var roomName = ((Xbim.Ifc4.ProductExtension.IfcSpace)room).LongName;

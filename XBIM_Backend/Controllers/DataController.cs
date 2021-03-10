@@ -47,7 +47,7 @@ namespace XBIM_Backend.Controllers
 
         [HttpGet]
         [Route("GetAllElementOccurences")]
-        public async Task<ActionResult<Object>> GetAllElementOccurences()
+        public async Task<ActionResult<Object>> GetAllElementOccurences()          
         {
             try
             {
